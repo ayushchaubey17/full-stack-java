@@ -4,7 +4,7 @@
 public class Abstract {
 public static void main(String[] args) {
     
-    Car obj = new Car() {
+    Kia obj = new Kia() {
         @Override
         public void drive(){
             System.out.println("driving by mahendra");
@@ -12,6 +12,8 @@ public static void main(String[] args) {
 
     };
 
+
+   
     obj.drive();
     obj.playMusic();
 
