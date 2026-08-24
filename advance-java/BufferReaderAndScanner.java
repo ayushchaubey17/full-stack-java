@@ -1,0 +1,7 @@
+/**
+ * BufferReaderAndScanner
+ */
+public class BufferReaderAndScanner {
+
+    
+}
