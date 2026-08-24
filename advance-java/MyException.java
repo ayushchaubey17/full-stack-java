@@ -12,8 +12,8 @@ public class MyException {
         try {
             if (b==0) {
                 
-            throw new ArithmeticException("can not able to divide");
-            // throw new AyushException("df");
+            // throw new ArithmeticException("can not able to divide");
+            throw new MyCustomException("not found");
             }
             System.out.println(a / b);
 
@@ -22,6 +22,9 @@ public class MyException {
             // TODO: handle exception
         } catch (ArithmeticException e) {
             System.out.println("its arithmetic exception");
+        }
+        catch(MyCustomException e){
+            System.out.println(e);
         }
 
         catch (Exception e) {
@@ -33,3 +36,12 @@ public class MyException {
 }
 
 
+
+
+ class MyCustomException extends Exception {
+
+    public MyCustomException(String name){
+        super(name);
+    }
+    
+}
