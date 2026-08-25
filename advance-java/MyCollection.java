@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collection;
 
+
 /**
  * MyCollection
  */
@@ -21,5 +22,8 @@ public class MyCollection {
         for (Object object : collection) {
             System.out.print(object+"--->");
         }
+
+
+        
     }
 }
