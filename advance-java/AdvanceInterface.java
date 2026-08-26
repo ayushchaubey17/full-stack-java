@@ -9,7 +9,7 @@ public class AdvanceInterface {
 }
 
 interface Payment {
-    int MAX_RETURN_TIME = 7;
+    int MAX_RETURN_TIME =8;
 
     void pay();
 

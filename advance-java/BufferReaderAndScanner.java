@@ -16,19 +16,16 @@ public class BufferReaderAndScanner {
         // int n = System.in.read();
         // System.out.println(n-48);
 
+        // InputStreamReader in = new InputStreamReader(System.in);
+        // BufferedReader br = new BufferedReader(in);
 
-//         InputStreamReader in = new InputStreamReader(System.in);
-//         BufferedReader br = new BufferedReader(in);
+        // String str = br.readLine();
+        // System.out.println(str);
 
-//    String str =      br.readLine();
-//    System.out.println(str);
-
-
-
-Scanner sc = new Scanner(System.in);
-int n = sc.nextInt();
-System.out.println(n);
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(n);
 
     }
-    
+
 }
