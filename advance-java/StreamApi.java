@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 /**
@@ -19,9 +20,23 @@ public class StreamApi {
         list.add(16);
         
 
-        Stream stream = list.stream();
+        Predicate<Integer> predicate = new Predicate<>() {
+            @Override
+            public boolean test(Integer n){
 
-        System.out.println(stream);
+                return n%2 ==0;
+            }
+            
+        };
+        Stream<Integer> stream = list.stream();
+        Stream<Integer> stream2 = stream.filter(predicate);
+        // Stream<Integer> stream2 = stream.filter(n -> n%2 == 0);
+
+
+
+        // System.out.println(stream);
+
+        stream2.forEach(el-> System.out.print(el+" "));
 
 
 
@@ -38,7 +53,8 @@ public class StreamApi {
         //     }
             
         // };
-        list.forEach(n -> System.out.println(n));
+
+        // list.forEach(n -> System.out.println(n));
 
 
     }
