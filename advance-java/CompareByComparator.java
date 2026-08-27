@@ -25,16 +25,16 @@ public class CompareByComparator {
 
     
 
-        List<Student> list = new ArrayList<>();
+        List<Student2> list = new ArrayList<>();
 
-        list.add(new Student(12, "eyush"));
-        list.add(new Student(7, "cyush"));
-        list.add(new Student(19, "byush"));
-        list.add(new Student(22, "dayush"));
-        list.add(new Student(5, "ayush"));
+        list.add(new Student2(12, "eyush"));
+        list.add(new Student2(7, "cyush"));
+        list.add(new Student2(19, "byush"));
+        list.add(new Student2(22, "dayush"));
+        list.add(new Student2(5, "ayush"));
 
         System.out.println(list);
-        Collections.sort(list, comparator);
+        // Collections.sort(list, comparator);
 
         System.out.println(list);
 
@@ -60,6 +60,31 @@ class Student {
     public String toString() {
 
         return this.name + " :" + this.age;
+    }
+
+}
+
+class Student2 implements Comparable<Student2> {
+
+    int age;
+    private String name;
+
+    public Student2(int age, String name) {
+        this.name = name;
+        this.age = age;
+
+    }
+
+    @Override
+    public String toString() {
+
+        return this.name + " :" + this.age;
+    }
+
+
+    @Override
+    public int compareTo( Student2 that ){
+        return this.age> that.age ? 1: -1;
     }
 
 }
