@@ -34,7 +34,7 @@ public class CompareByComparator {
         list.add(new Student2(5, "ayush"));
 
         System.out.println(list);
-        // Collections.sort(list, comparator);
+        Collections.sort(list);
 
         System.out.println(list);
 
