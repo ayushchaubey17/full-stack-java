@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
@@ -37,13 +39,24 @@ public class StreamApi {
         // list.stream().filter(n -> n%2 != 0 ).forEach(n -> System.out.println(n));
 
 
+        // BinaryOperator<Integer> binaryOperator = new BinaryOperator<Integer>(){
+
+        //     @Override
+
+        //     public Integer apply(Integer integer1 ,Integer integer2){
+        //         return integer1+integer2;
+        //     }
+
+        // }
+
+
+
         System.out.println(
             list.stream()
             .filter(n -> n%2==0)
             .map(n-> 2*n)
             .reduce(0,(a,b)->a+b)
         );
-
 
 
 
