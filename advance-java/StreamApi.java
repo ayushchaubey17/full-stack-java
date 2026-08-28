@@ -34,7 +34,18 @@ public class StreamApi {
 
 
 
-        list.stream().filter(n -> n%2 != 0 ).forEach(n -> System.out.println(n));
+        // list.stream().filter(n -> n%2 != 0 ).forEach(n -> System.out.println(n));
+
+
+        System.out.println(
+            list.stream()
+            .filter(n -> n%2==0)
+            .map(n-> 2*n)
+            .reduce(0,(a,b)->a+b)
+        );
+
+
+
 
         // System.out.println(stream);
 
