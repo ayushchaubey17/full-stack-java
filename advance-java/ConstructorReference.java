@@ -19,7 +19,7 @@ public class ConstructorReference {
 
 
         names.stream().map(Student::new).forEach(System.out::println);
-        // names.stream().map(name-> new Student(name)).forEach(System.out::println);
+        names.stream().map(name-> new Student(name)).forEach(System.out::println);
 
 
 
